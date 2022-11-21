@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>
+           
+        </title>
+        <h1>
+            登入頁面
+        </h1>
+    </head>
+    <body>
+        <form method = 'post' id = 'login' onsubmit="return false;">
+            帳號：<input type = 'text' name = 'account' id = 'account'/>
+            <input type = 'submit' id = 'sub'/>
+        </form>
+    </body>
+        <script src = 'https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js' ></script>
+
+    <script>
+    
+            function getId(id) {
+                return document.getElementById(id);
+            }
+            
+    getId('login').addEventListener('submit', async(e) => {
+			e.preventDefault();
+			const data = {
+				account : getId('account').value,
+			};
+			//await axios.post('/login/token');
+			const checked_data = await axios.post('/se_auction', data);
+            console.log(checked_data);
+			if (checked_data.data.suc) {
+				//alert(checked_data.data.token);
+				if (checked_data.data.title == 'cus') {
+					window.location.href = '/se_auction/cus';
+				}
+				else {
+					window.location.href = '/se_auction/seller';
+				};
+			};
+        });
+    </script>
+</html>

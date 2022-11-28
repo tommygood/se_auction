@@ -10,6 +10,8 @@
   ![auction_sql_schema jpg](https://user-images.githubusercontent.com/96759292/203079936-0d7d37c5-0b07-460b-859f-453ce033d404.jpg)
 
   - 說明 : <b>賣家買家之間有著複雜關係。</b>
+  - <b>總共有五個資料表。</b>
+  
   
   
 

@@ -38,6 +38,10 @@
 
 - node
 
+## Installation
+
+- `git clone https://github.com/tommygood/se_auction.git`
+
 ## Configuration
 
 - setting the db account and password in `api/se_auction.js`

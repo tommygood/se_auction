@@ -17,6 +17,7 @@ app.use(cookieParser());
 app.set("view engine", "jade");
 app.set("views", "jade");
 app.use('/se_auction', require('./api/se_auction'));
+app.use('/js', express.static('./js'));
 const db = require("mariadb");
 const pool = db.createPool({
     trace : true,
